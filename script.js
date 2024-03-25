@@ -7,11 +7,14 @@ function uniquementEtetes(periode = "Année") {
     empruntTable.innerHTML = `
 <tr>
     <th>${periode}</th>
-    <th>Capital restant du en début de période</th>
+    <th>Capital restant dû en début de période</th>
     <th>Intérêts de la période</th>
-    <th>Amortissement du capital</th>
+    <th>
+        Amortissement du capital</br>
+        (Vous paieriez cette somme chaque ${periode})
+    </th>
     <th>Annuité d'emprunt</th>
-    <th>Capital restant du en fin de période</th>
+    <th>Capital restant dû en fin de période</th>
 </tr>`;
 
 }
