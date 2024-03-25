@@ -45,11 +45,12 @@ main {
     display: flex;
     justify-content: center;
     gap: 1rem;
+    font-size: 1rem;
 }
 
 .sub {
     font-weight: lighter;
-    font-size: 1.5rem;
+    font-size: 1rem;
 }
 
 .alerts {
@@ -147,6 +148,24 @@ table tr:nth-child(odd) {
     background-color: var(--tertiary-color);
 }
 
+button {
+    padding: 0.5rem;
+    border: none;
+    border-radius: 0.2rem;
+    background-color: var(--secondary-color);
+    color: white;
+    cursor: pointer;
+    margin-bottom: 0.5rem;
+}
+
+button:hover {
+    background-color: var(--primary-color);
+}
+
+.hidden {
+    display: none;
+}
+
 @media screen and (min-width: 1000px) {
     main {
         overflow-x: hidden;
@@ -161,5 +180,21 @@ table tr:nth-child(odd) {
 
     form > div {
         flex: 1;
+    }
+
+    #footer {
+        font-size: 1.5rem;
+    }
+
+    .sub {
+        font-size: 1.5rem;
+    }
+
+    .hidden {
+        display: flex;
+    }
+
+    .hiddenBig {
+        display: none;
     }
 }

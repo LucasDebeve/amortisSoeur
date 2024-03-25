@@ -19,6 +19,12 @@ function uniquementEtetes(periode = "Année") {
 
 }
 
+function toggleForm() {
+    console.log("toggleForm");
+    const form = document.getElementById("form");
+    form.classList.toggle("hidden");
+}
+
 function ajouterLigneAmmortissementConstant(capital, taux, duree, n, amortissement, liste) {
     const table = document.getElementById("emprunt");
     const ligne = table.insertRow(-1);
@@ -138,3 +144,5 @@ document.querySelectorAll("input, select").forEach(input => {
         ajouterTotal(liste);
     });
 });
+
+document.getElementById("showForm").addEventListener("click", toggleForm);
