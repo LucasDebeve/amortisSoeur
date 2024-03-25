@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Tableau d'amortissement</h1>
+    <form action="">
+        <div>
+            <label for="montant">Montant emprunté</label>
+            <input type="text" name="montant" id="montant">
+        </div>
+        <div>
+            <label for="taux">Taux d'intérêt annuel en %</label>
+            <input type="number" name="taux" id="taux" step="0.1">
+        </div>
+        <div>
+            <label for="duree">Durée de l'emprunt</label>
+            <input type="text" name="duree" id="duree">
+        </div>
+
+        <div>
+        <label for="période">Période de remboursement</label>
+        <select name="période" id="période">
+            <option value="mensuel" selected>Mensuel</option>
+            <option value="trimestriel">Trimestriel</option>
+            <option value="semestriel">Semestriel</option>
+            <option value="annuel">Annuel</option>
+        </select>
+        </div>
+
+        <div>
+            <label for="type">Type de remboursement</label>
+            <div>
+                <input type="radio" name="type" value="annuité" id="annuité">
+                <label for="annuité">Annuité constante</label>
+            </div>
+            <div>
+                <input type="radio" name="type" value="capital" id="capital" checked>
+                <label for="capital">Amortissement constant</label>
+            </div>
+        </div>
+    </form>
+    <main>
+        <table id="emprunt">
+            
+        </table>
+    </main>
+    <footer id="footer">
+        <div>
+            <p id="amo">100 €</p>
+            <p class="sub">Amortissement</p>
+        </div>
+        <div>
+            <p>+</p>
+        </div>
+        <div>
+            <p id="int">36 €</p>
+            <p class="sub">Intérêts</p>
+        </div>
+        <div>
+            <p>=</p>
+        </div>
+        <div>
+            <p id="ann">136 €</p>
+            <p class="sub">Annuités</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
