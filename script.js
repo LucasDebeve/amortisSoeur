@@ -147,4 +147,33 @@ document.querySelectorAll("input, select").forEach(input => {
     });
 });
 
+function exporterTableauEnCSV() {
+    const table = document.getElementById("emprunt");
+    let csvContent = "";
+
+    // Parcourir toutes les lignes du tableau
+    for (let row of table.rows) {
+        let rowData = [];
+        for (let cell of row.cells) {
+            // Nettoyer le texte pour enlever les caractères gênants
+            let text = cell.innerText.replace(/\s+/g, ' ').replace(/€/g, '').trim();
+            rowData.push('"' + text + '"');
+        }
+        csvContent += rowData.join(";") + "\n";
+    }
+
+    // Créer un blob et lancer le téléchargement
+    const blob = new Blob([csvContent], { type: "text/csv;charset=utf-8;" });
+    const url = URL.createObjectURL(blob);
+
+    const a = document.createElement("a");
+    a.setAttribute("href", url);
+    a.setAttribute("download", "tableau_amortissement.csv");
+    a.style.display = "none";
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+}
+
+
 document.getElementById("showForm").addEventListener("click", toggleForm);
