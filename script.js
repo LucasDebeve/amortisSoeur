@@ -10,10 +10,12 @@ function uniquementEtetes(periode = "Année") {
     <th>Capital restant dû en début de période</th>
     <th>Intérêts de la période</th>
     <th>
-        Amortissement du capital</br>
+        Amortissement du capital
+    </th>
+    <th>
+        Annuité d'emprunt </br>
         (Vous paieriez cette somme chaque ${periode})
     </th>
-    <th>Annuité d'emprunt</th>
     <th>Capital restant dû en fin de période</th>
 </tr>`;
 
